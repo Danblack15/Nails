@@ -1,0 +1,16 @@
+.fp-watermark {
+	display: none;
+}
+
+.active{
+	background: red;
+}
+
+.wrapper {
+	&__section {
+		display: flex;
+		align-items: center;
+		font-size: 55px;
+		font-family: 'Tahoma';
+	}
+}
