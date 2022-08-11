@@ -1,16 +1,28 @@
-.fp-watermark {
-	display: none;
+.active{
+	.wrapper-sec {
+		transform: scale(1);
+	}
 }
 
-.active{
-	background: red;
+.wrapper-sec {
+	transform: scale(0.7);
+	transition: transform 0.7s;
 }
 
 .wrapper {
 	&__section {
-		display: flex;
 		align-items: center;
 		font-size: 55px;
 		font-family: 'Tahoma';
+		padding: 60px;
+		padding: 60px max(50vw - 900px, 60px);
+	}
+}
+
+@media screen and (max-height: 950px) {
+	.wrapper {
+		&__section {
+			padding: 30px max(50vw - 900px, 30px)
+		}
 	}
 }

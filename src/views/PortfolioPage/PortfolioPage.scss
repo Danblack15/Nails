@@ -1,3 +1,26 @@
 .portfolio {
-    background-image: linear-gradient(180deg, #FF73A6 0%, #FF5166 100%);
+	background-image: linear-gradient(155.08deg, #D19FCE 25.52%, #FF84B8 87.43%);
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		background: #F7E2E1;
+		border-radius: 50px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__back {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		bottom: 0;
+		user-select: none;
+		pointer-events: none;
+	}
+
+	&__content {
+		padding: 130px 0 0 0;
+		text-align: center;
+	}
 }

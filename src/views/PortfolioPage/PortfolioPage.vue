@@ -1,12 +1,24 @@
 <template>
   <section class="portfolio">
-    Portfolio Page
+    <div class="portfolio__wrapper wrapper-sec">
+      <img src="@/assets/svg/background-figure/bg-portfolio.svg" alt="background" class="portfolio__back" />
+
+      <div class="portfolio__content">
+        <h3>Примеры моих работ</h3>
+
+        <PortfolioSlider />
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
-export default {
+import PortfolioSlider from '@/components/PortfolioSlider/PortfolioSlider'
 
+export default {
+  components: {
+    PortfolioSlider
+  }
 }
 </script>
 

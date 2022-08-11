@@ -1,0 +1,65 @@
+.nav-bar {
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 31px;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			& a {
+				font-weight: 700;
+			}
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 2px;
+			height: 25px;
+			background: #0D3F7C;
+			margin: 0 20px;
+			transform: translateY(2px);
+		}
+
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+
+		& a {
+			text-decoration: none;
+			font-family: 'Mali', cursive;
+			color: #0D3F7C;
+		}
+	}
+
+	.active {
+		& a {
+			font-size: 24px !important;
+			font-weight: 700;
+			animation-name: active-menu;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+			opacity: 0;
+			transform: scale(0);
+		}
+	}
+
+	@keyframes active-menu {
+		70% {
+			opacity: 1;
+			transform: scale(1.15);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}

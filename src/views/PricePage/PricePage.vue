@@ -1,6 +1,9 @@
 <template>
   <section class="price">
-    Price Page
+    <div class="price__wrapper wrapper-sec">
+      <img src="@/assets/svg/background-figure/bg-price1.svg" alt="background" class="price__back1" />
+      <img src="@/assets/svg/background-figure/bg-price2.svg" alt="background" class="price__back2" />
+    </div>
   </section>
 </template>
 

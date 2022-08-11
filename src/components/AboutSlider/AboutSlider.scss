@@ -1,0 +1,137 @@
+.slider-about {
+	width: 100%;
+	height: 100%;
+	padding: 0 90px;
+	padding-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+
+	&__slider {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 90px;
+		z-index: 2;
+		transition: 0.6s;
+
+		&--active {
+			left: calc(100% - 90px);
+			transform: translateX(-100%);
+		}
+
+	}
+
+	&__box {
+		width: 646px;
+		height: 642px;
+		border-radius: 50px;
+		border: 9px solid #BF4F4E;
+		position: relative;
+		overflow: hidden;
+
+		&--active {
+			opacity: 1 !important;
+		}
+
+		& img {
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			object-fit: cover;
+			user-select: none;
+			pointer-events: none;
+
+			&:last-child {
+				opacity: 0;
+				transition: opacity 0.6s;
+			}
+		}
+	}
+
+	&__arrow {
+		width: 95px;
+		height: 154px;
+		cursor: pointer;
+		user-select: none;
+		position: absolute;
+		right: -45px;
+		transform: translateX(100%);
+		transition: 0.6s;
+
+		&--active {
+			right: calc(100% + 45px);
+			transform: translateX(0) rotate(-180deg);
+			transition: 0.6s;
+
+			&:hover {
+				transform: translateX(-15px) rotate(-180deg) !important;
+			}
+		}
+
+		&:hover {
+			transform: translateX(calc(100% + 15px));
+		}
+	}
+
+	@keyframes arrow-hover {
+		50% {
+			transform: scale(0.8) translateX(100%);
+		}
+
+		100% {
+			transform: scale(1) translateX(100%);
+		}
+	}
+
+	&__text {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 150.5%;
+		text-align: right;
+		width: 625px;
+		position: absolute;
+		right: 90px;
+		transition: 0.6s;
+
+		&--active {
+			right: calc(100% - 90px);
+			transform: translateX(100%);
+			transition: 0.6s;
+		}
+
+		&--fadeIn {
+			animation-name: text-active;
+			animation-duration: 0.6s;
+			animation-fill-mode: forwards;
+			opacity: 0;
+
+			@keyframes text-active {
+				50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+
+		& h4 {
+			font-size: 65px;
+		}
+	}
+
+	&__text-second {
+		text-align: left;
+	}
+
+	&__text-wrapper {
+		display: flex;
+		flex-direction: column;
+		grid-row-gap: 40px;
+	}
+}

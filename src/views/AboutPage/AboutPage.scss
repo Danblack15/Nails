@@ -1,3 +1,22 @@
 .about {
-    background-image: linear-gradient(180deg, #FF36BB 0%, #FF73A6 100%);
+	background-image: linear-gradient(24.09deg, #D19FCE 26.14%, #E97A80 71.08%);
+
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		background: #F7E2E1;
+		border-radius: 50px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__back {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		bottom: 0;
+		user-select: none;
+		pointer-events: none;
+	}
 }

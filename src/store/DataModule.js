@@ -1,19 +1,31 @@
+import nailsImg from './nails.json'
+
 export const DataModule = {
-    state: () => {
+	state: () => ({
+		indexSection: 0,
+		allNailsImg: nailsImg
+	}),
 
-    },
+	getters: {
+		getIndexSection(state) {
+			return state.indexSection
+		},
+		getNailsImg(state) {
+			return state.allNailsImg
+		}
+	},
 
-    getters: {
+	mutations: {
+		setIndexSection(state, newIndex) {
+			state.indexSection = newIndex
+		}
+	},
 
-    },
+	actions: {
+		newSectionIndex({ commit }, newIndex) {
+			commit('setIndexSection', newIndex)
+		}
+	},
 
-    mutations: {
-
-    },
-
-    actions: {
-
-    },
-
-    namespaced: true
+	namespaced: true
 }
