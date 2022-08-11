@@ -1,4 +1,4 @@
-.active{
+.active {
 	.wrapper-sec {
 		transform: scale(1);
 	}
@@ -16,6 +16,37 @@
 		font-family: 'Tahoma';
 		padding: 60px;
 		padding: 60px max(50vw - 900px, 60px);
+	}
+}
+
+.scroll-hint {
+	position: absolute;
+	bottom: 30px;
+	right: 50px;
+	user-select: none;
+	pointer-events: none;
+
+	animation-name: scroll-hint;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+@keyframes scroll-hint {
+	60% {
+		transform: translateY(0);
+	}
+	70% {
+		transform: translateY(10%);
+	}
+	80% {
+		transform: translateY(0);
+	}
+	90% {
+		transform: translateY(10%);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
 

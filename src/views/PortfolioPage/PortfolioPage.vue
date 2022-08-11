@@ -8,6 +8,12 @@
 
         <PortfolioSlider />
       </div>
+
+      <img 
+        src="@/assets/svg/scroll/portfolio.svg" 
+        alt="scroll-down"
+        class="scroll-hint"
+      />
     </div>
   </section>
 </template>

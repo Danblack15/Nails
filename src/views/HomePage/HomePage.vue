@@ -29,6 +29,12 @@
 
       <!-- <ArmsHome class="home__animations" /> -->
 
+      <img 
+        src="@/assets/svg/scroll/home.svg" 
+        alt="scroll-down"
+        class="scroll-hint"
+      />
+
     </div>
   </section>
 </template>
